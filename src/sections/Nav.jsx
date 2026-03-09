@@ -48,7 +48,7 @@ function Nav() {
 
     <section className='relative z-10 flex justify-center items-center border-x border-b min-h-[20rem] md:h-[20rem] lg:h-[28rem] border-white mx-4 md:mx-8 px-6 md:px-16 py-10 md:py-0 transition-all duration-500'>
       <h2 className='text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center leading-snug'>
-        Hi, I'm [Sparsh], a high functioning Fullstack Developer with a strong foundation in NextJS, performance-focused UI, and scalable component systems. Currently exploring Backend Technologies.
+        Hi, I'm [Sparsh], a curiosity-driven Fullstack Developer with a strong foundation in NextJS, performance-focused UI, and scalable component systems. Currently exploring Backend Technologies.
       </h2>
     </section>
   </>

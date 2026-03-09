@@ -12,22 +12,22 @@
 
 
 @font-face {
-    font-family: 'StandardGA';
-    src: url('./assets/fonts/sga-font.otf') format('opentype');
+  font-family: 'StandardGA';
+  src: url('./assets/fonts/sga-font.otf') format('opentype');
 }
 
 
 html {
-    background-color: black;
-    scroll-behavior: smooth;
-    height: 100%;
-    width: 100%;
+  background-color: black;
+  scroll-behavior: smooth;
+  height: 100%;
+  width: 100%;
 }
 
 h2,
 body {
-    color: white;
-    font-family: 'Chakra Petch', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  color: white;
+  font-family: 'Chakra Petch', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
 }
 
 h1,
@@ -37,28 +37,31 @@ h5,
 h6,
 text,
 button {
-    font-family: 'Doto', sans-serif;
+  font-family: 'Doto', sans-serif;
 }
 
 /* Hide native scrollbars for the carousel */
 .no-scrollbar::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .galactic,
 .galactic * {
-    font-family: 'StandardGA', sans-serif !important;
+  font-family: 'StandardGA', sans-serif !important;
 }
 
 @keyframes wave {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-5px);
   }
