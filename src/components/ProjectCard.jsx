@@ -28,7 +28,7 @@ export const ProjectCard = ({ src, title, description }) => {
             </div>
 
             <h3 className="pt-4 text-lg md:text-xl font-bold">{title}</h3>
-            <p className="pt-2 text-sm md:text-base">{description}</p>
+            <p className="pt-2 h-16 overflow-hidden text-sm md:text-base">{description}</p>
 
             <button
                 className="

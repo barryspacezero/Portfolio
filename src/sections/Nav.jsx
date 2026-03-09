@@ -8,7 +8,16 @@ function Nav() {
 
   return (<>
     <nav className="flex flex-row mx-4 md:mx-8 mt-6 md:mt-8 justify-between items-center border px-6 md:px-12 py-3 md:py-0 gap-4 md:gap-0 border-white relative z-20 bg-black">
-      <h3 className='text-xl md:text-xl font-bold'>Hi, I'm [Sparsh]</h3>
+      <h3 className='text-xl md:text-xl font-bold flex wave-text cursor-default' onClick={(e) => window.open("https://sparshdev.space", "_blank")}>
+        {"Hi, I'm [Sparsh]".split("").map((char, index) => (
+          <span
+            key={index}
+            style={{ animationDelay: `${index * 0.05}s` }}
+          >
+            {char === ' ' ? '\u00A0' : char}
+          </span>
+        ))}
+      </h3>
       <div className='flex hidden md:block'>
         <button className='border-x font-bold border-white px-4 py-3 md:p-4 text-sm md:text-base hover:text-black hover:bg-white transition-colors'>Resume</button>
         <button className='border-r font-bold border-white px-4 py-3 md:p-4 text-sm md:text-base hover:text-black hover:bg-white transition-colors'>Projects</button>

@@ -54,3 +54,22 @@ button {
 .galactic * {
     font-family: 'StandardGA', sans-serif !important;
 }
+
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.wave-text span {
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.wave-text:hover span {
+  animation: wave 1s ease-in-out infinite;
+  color: #00e5ff;
+}

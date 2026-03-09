@@ -42,11 +42,11 @@ function App() {
     <main className="min-h-screen">
       <Nav />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mx-4 md:mx-8">
-        <ProjectCard src={NFP} title="Food Inspector" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod." />
-        <ProjectCard src={taskmanager} title="Task-Tracker" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod." />
-        <ProjectCard src={"https://picsum.photos/536/354"} title="Telegram-GameInfoBot" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod." />
-        <ProjectCard src={"https://picsum.photos/200/300"} title="Flip-Learn" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod." />
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 mx-4 md:mx-8">
+        <ProjectCard src={NFP} title="Food Inspector" description="A simple nutrition tracking app built with ReactJS and Tailwind CSS." />
+        <ProjectCard src={taskmanager} title="Task-Tracker" description="A Task Tracker app built with NextJS, TypeScript and Tailwind CSS with backend written in Express, NodeJS and MongoDB." />
+        <ProjectCard src={"https://picsum.photos/536/354"} title="Telegram-GameInfoBot" description="A Telegram bot built with Python using the Pyrogram library and Twitch's API." />
+        <ProjectCard src={"https://picsum.photos/200/300"} title="Flip-Learn" description="A Quiz app built with ReactJS, TypeScript and Tailwind CSS." />
       </div>
 
       <Exp />
