@@ -41,8 +41,9 @@ function App() {
   return (
     <main className="min-h-screen">
       <Nav />
-
+      <h1 className="text-5xl font-bold text-white justify-center flex border mx-4 p-4 md:mx-8">Projects</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 mx-4 md:mx-8">
+
         <ProjectCard src={NFP} title="Food Inspector" description="A simple nutrition tracking app built with ReactJS and Tailwind CSS." />
         <ProjectCard src={taskmanager} title="Task-Tracker" description="A Task Tracker app built with NextJS, TypeScript and Tailwind CSS with backend written in Express, NodeJS and MongoDB." />
         <ProjectCard src={"https://picsum.photos/536/354"} title="Telegram-GameInfoBot" description="A Telegram bot built with Python using the Pyrogram library and Twitch's API." />
