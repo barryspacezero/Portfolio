@@ -59,7 +59,7 @@ function TimelineItem({ exp, index }) {
     return (
         <div
             ref={ref}
-            className={`relative flex items-start gap-0 mb-16 timeline-item  ${isLeft ? "flex-row" : "flex-row-reverse"
+            className={`relative flex flex-col md:flex-row items-center md:items-start gap-0 mb-12 md:mb-16 timeline-item ${isLeft ? "md:flex-row" : "md:flex-row-reverse"
                 }`}
             style={{
                 opacity: visible ? 1 : 0,
@@ -71,7 +71,7 @@ function TimelineItem({ exp, index }) {
         >
             {/* Card */}
             <div
-                className={`w-5/12 ${isLeft ? "pr-8 text-right" : "pl-8 text-left"}`}
+                className={`w-full md:w-5/12 ${isLeft ? "md:pr-8 md:text-right text-left" : "md:pl-8 text-left"}`}
             >
                 <div className="relative group cursor-default">
                     {/* Background block mask for animation */}
@@ -101,18 +101,29 @@ function TimelineItem({ exp, index }) {
                             border: `1px solid ${exp.color}`,
                         }}
                     >
-                        {/* Type badge */}
-                        <span
-                            className="inline-block text-xs font-semibold px-2 py-0.5 rounded-full mb-3"
-                            style={{
-                                background: `${exp.color}22`,
-                                color: exp.color,
-                                border: `1px solid ${exp.color}44`,
-                                fontFamily: "'Chakra Petch', sans-serif",
-                            }}
-                        >
-                            {exp.type}
-                        </span>
+                        {/* Type badge and Year (mobile) */}
+                        <div className={`flex items-center gap-3 mb-3 ${isLeft ? "md:justify-end justify-start" : "justify-start"}`}>
+                            <span
+                                className="inline-block text-xs font-semibold px-2 py-0.5 rounded-full"
+                                style={{
+                                    background: `${exp.color}22`,
+                                    color: exp.color,
+                                    border: `1px solid ${exp.color}44`,
+                                    fontFamily: "'Chakra Petch', sans-serif",
+                                }}
+                            >
+                                {exp.type}
+                            </span>
+                            <span
+                                className="md:hidden text-sm font-bold text-white"
+                                style={{
+                                    fontFamily: "'Doto', sans-serif",
+                                    letterSpacing: "0.08em",
+                                }}
+                            >
+                                {exp.year}
+                            </span>
+                        </div>
 
                         <h3
                             className="text-lg font-bold text-white mb-1 leading-tight"
@@ -144,7 +155,7 @@ function TimelineItem({ exp, index }) {
 
                         {/* Skills */}
                         <div
-                            className={`flex flex-wrap gap-2 ${isLeft ? "justify-end" : "justify-start"
+                            className={`flex flex-wrap gap-2 ${isLeft ? "md:justify-end justify-start" : "justify-start"
                                 }`}
                         >
                             {exp.skills.map((skill) => (
@@ -162,7 +173,7 @@ function TimelineItem({ exp, index }) {
             </div>
 
             {/* Center stem + dot */}
-            <div className="w-2/12 flex flex-col items-center relative">
+            <div className="hidden md:flex w-2/12 flex-col items-center relative">
                 {/* Dot */}
                 <div
                     className="relative z-10 flex items-center justify-center w-10 h-10 border-2 mt-4"
@@ -192,7 +203,7 @@ function TimelineItem({ exp, index }) {
             </div>
 
             {/* Empty spacer (opposite side) */}
-            <div className="w-5/12" />
+            <div className="hidden md:block md:w-5/12" />
         </div>
     );
 }
@@ -230,7 +241,7 @@ export default function Exp() {
             <div className="relative max-w-4xl mx-auto">
                 {/* Central vertical line */}
                 <div
-                    className="absolute left-1/2 top-0 bottom-0 w-px -translate-x-1/2"
+                    className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px -translate-x-1/2"
                     style={{
                         background:
                             "linear-gradient(to bottom, transparent, #ffffff22 10%, #ffffff22 90%, transparent)",
