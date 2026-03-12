@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react"
 import Nav from "./sections/Nav"
+import GameInfoBot from "./assets/GameInfoBot.png"
+import FlipLearn from "./assets/FlipLearn.png"
 import Exp from "./sections/Exp"
 import NFP from "./assets/NFP.png"
 import taskmanager from "./assets/taskmanager.png"
@@ -47,8 +49,8 @@ function App() {
 
         <ProjectCard src={NFP} title="Food Inspector" description="A simple nutrition tracking app built with ReactJS and Tailwind CSS." projectLink="https://nutrition-fact-panels.vercel.app/" githubLink={"https://github.com/barryspacezero/Nutrition_Fact_Panels"} />
         <ProjectCard src={taskmanager} title="Task-Tracker" description="A Task Tracker app built with NextJS, TypeScript and Tailwind CSS with backend written in Express, NodeJS and MongoDB." projectLink="https://penguin-task-tracker.vercel.app/" githubLink={"https://github.com/barryspacezero/Task-Tracker"} />
-        <ProjectCard src={"https://picsum.photos/536/354"} title="Telegram-GameInfoBot" description="A Telegram bot built with Python using the Pyrogram library and Twitch's API." githubLink="https://github.com/barryspacezero/Telegram-GameInfoBot" />
-        <ProjectCard src={"https://picsum.photos/200/300"} title="Flip-Learn" description="A Quiz app built with ReactJS, TypeScript and Tailwind CSS." projectLink="https://flip-learn-xw4f.vercel.app/" githubLink={"https://github.com/barryspacezero/Fliplearn"} />
+        <ProjectCard src={GameInfoBot} title="Telegram-GameInfoBot" description="A Telegram bot built with Python using the Pyrogram library and Twitch's API." githubLink="https://github.com/barryspacezero/Telegram-GameInfoBot" />
+        <ProjectCard src={FlipLearn} title="Flip-Learn" description="A Flashcards app for Quizzes built with ReactJS, TypeScript and Tailwind CSS." projectLink="https://flip-learn-xw4f.vercel.app/" githubLink={"https://github.com/barryspacezero/Fliplearn"} />
       </div>
 
 

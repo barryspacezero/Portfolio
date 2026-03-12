@@ -81,7 +81,7 @@ function TimelineItem({ exp, index }) {
                     >
                         {/* Type badge and Year (mobile) */}
                         <div className={`flex items-center gap-3 mb-3 ${isLeft ? "md:justify-end justify-start" : "justify-start"}`}>
-                            <span
+                            {/* <span
                                 className="inline-block text-xs font-semibold px-2 py-0.5 rounded-full"
                                 style={{
                                     background: `${exp.color}22`,
@@ -91,7 +91,7 @@ function TimelineItem({ exp, index }) {
                                 }}
                             >
                                 {exp.type}
-                            </span>
+                            </span> */}
                             <span
                                 className="md:hidden text-sm font-bold text-white"
                                 style={{
@@ -118,7 +118,7 @@ function TimelineItem({ exp, index }) {
                         </p>
 
                         <p
-                            className="text-xs text-white/40 mb-3"
+                            className="text-xs text-white/50 mb-3"
                             style={{ fontFamily: "'Chakra Petch', sans-serif" }}
                         >
                             {exp.duration}
@@ -139,8 +139,8 @@ function TimelineItem({ exp, index }) {
                             {exp.skills.map((skill) => (
                                 <span
                                     key={skill}
-                                    className="text-xs px-2 py-0.5 rounded text-white/50 border border-white/10"
-                                    style={{ fontFamily: "'Chakra Petch', sans-serif" }}
+                                    className="text-xs px-2 py-0.5 text-white/50 "
+                                    style={{ fontFamily: "'Chakra Petch', sans-serif", border: `1px solid ${exp.color}90` }}
                                 >
                                     {skill}
                                 </span>
@@ -187,7 +187,7 @@ function TimelineItem({ exp, index }) {
 
 export default function Exp() {
     return (
-        <section className="relative py-20 px-4 overflow-hidden border mx-4 md:mx-8 border-t-0" id="experience">
+        <section className="relative py-16 px-4 overflow-hidden border mx-4 md:mx-8 border-t-0" id="experience">
             {/* Ambient background glow */}
             <div
                 className="absolute inset-0 pointer-events-none"
