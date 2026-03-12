@@ -41,6 +41,7 @@ function App() {
   return (
     <main className="min-h-screen">
       <Nav />
+      <Exp />
       <h1 className="text-5xl font-bold text-white justify-center flex border mx-4 p-4 md:mx-8">Projects</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 mx-4 md:mx-8">
 
@@ -50,7 +51,7 @@ function App() {
         <ProjectCard src={"https://picsum.photos/200/300"} title="Flip-Learn" description="A Quiz app built with ReactJS, TypeScript and Tailwind CSS." projectLink="https://flip-learn-xw4f.vercel.app/" githubLink={"https://github.com/barryspacezero/Fliplearn"} />
       </div>
 
-      <Exp />
+
     </main>
   )
 }
