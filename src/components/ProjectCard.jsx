@@ -1,6 +1,6 @@
 import React from "react"
 
-export const ProjectCard = ({ src, title, description }) => {
+export const ProjectCard = ({ src, title, description, githubLink, projectLink }) => {
     return (
         <div className="group border border-white border-t-0 aspect-square p-6">
 
@@ -30,18 +30,43 @@ export const ProjectCard = ({ src, title, description }) => {
             <h3 className="pt-4 text-lg md:text-xl font-bold">{title}</h3>
             <p className="pt-2 h-16 overflow-hidden text-sm md:text-base">{description}</p>
 
-            <button
-                className="
-          border border-white font-bold
-          p-2 mt-4 w-full
-          transition-all duration-200 ease-out
-          group-hover:bg-white
-          group-hover:text-black
-          cursor-pointer
-        "
-            >
-                View Project
-            </button>
+            <div className="flex gap-4">
+                {projectLink && (
+                    <a
+                        href={projectLink}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="
+              border border-white font-bold
+              p-2 mt-4 w-full
+              transition-all duration-200 ease-out
+              group-hover:bg-white flex items-center justify-center
+              group-hover:text-black
+              cursor-pointer hover:opacity-80
+            "
+                    >
+                        View Project
+                    </a>
+                )}
+                {githubLink && (
+                    <a
+                        href={githubLink}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="
+              border border-white font-bold
+              p-2 mt-4 w-full flex items-center justify-center
+              transition-all duration-200 ease-out
+              group-hover:bg-white
+              group-hover:text-black
+              cursor-pointer
+              hover:opacity-80
+            "
+                    >
+                        GitHub
+                    </a>
+                )}
+            </div>
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React from "react";
 
 const experiences = [
     {
@@ -40,34 +40,12 @@ const experiences = [
 ];
 
 function TimelineItem({ exp, index }) {
-    const [visible, setVisible] = useState(false);
-    const ref = useRef(null);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) setVisible(true);
-            },
-            { threshold: 0.2 }
-        );
-        if (ref.current) observer.observe(ref.current);
-        return () => observer.disconnect();
-    }, []);
-
     const isLeft = index % 2 === 0;
 
     return (
         <div
-            ref={ref}
             className={`relative flex flex-col md:flex-row items-center md:items-start gap-0 mb-12 md:mb-16 timeline-item ${isLeft ? "md:flex-row" : "md:flex-row-reverse"
                 }`}
-            style={{
-                opacity: visible ? 1 : 0,
-                transform: visible
-                    ? "translateY(0)"
-                    : `translateY(40px)`,
-                transition: `opacity 0.6s ease ${index * 0.15}s, transform 0.6s ease ${index * 0.15}s`,
-            }}
         >
             {/* Card */}
             <div
@@ -180,8 +158,7 @@ function TimelineItem({ exp, index }) {
                     style={{
                         background: `${exp.color}18`,
                         borderColor: exp.color,
-                        boxShadow: visible ? `0 0 16px 4px ${exp.color}55` : "none",
-                        transition: `box-shadow 0.4s ease ${index * 0.15 + 0.3}s`,
+                        boxShadow: `0 0 16px 4px ${exp.color}55`,
                     }}
                 >
                     <div
