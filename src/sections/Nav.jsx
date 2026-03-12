@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import HamburgerMenu from '../components/HamburgerMenu'
 function Nav() {
-  const [hamburgerOpen, setHamburgerOpen] = React.useState(false);
+  const [hamburgerOpen, setHamburgerOpen] = useState(false);
+  const [resumeOpen, setResumeOpen] = useState(false);
   const toggleHamburger = () => {
     setHamburgerOpen(!hamburgerOpen);
   }
@@ -18,8 +19,38 @@ function Nav() {
           </span>
         ))}
       </h3>
-      <div className='flex hidden md:block'>
-        <button className='border-x font-bold border-white px-4 py-3 md:p-4 text-sm md:text-base hover:text-black hover:bg-white transition-colors'>Resume</button>
+      <div className='hidden md:flex'>
+        <div className='relative'>
+          <button
+            onClick={() => setResumeOpen(!resumeOpen)}
+            className='border-x font-bold border-white px-4 py-3 md:p-4 text-sm md:text-base hover:text-black hover:bg-white transition-colors h-full flex items-center gap-2'
+          >
+            Resume
+            <span className="text-xs">{resumeOpen ? '▲' : '▼'}</span>
+          </button>
+
+          <div
+            className={`absolute top-full left-0 w-full bg-black flex flex-col overflow-hidden transition-all duration-500 ease-in-out border-white ${resumeOpen ? 'max-h-64 border-x border-b opacity-100' : 'max-h-0 border-x-0 border-b-0 opacity-0'
+              }`}
+          >
+            <a
+              href="/Sparsh_s_Resume.pdf"
+              download="Sparsh_s_Resume.pdf"
+              className={`w-full text-center font-bold border-b border-white px-2 py-4 text-sm hover:text-black hover:bg-white transition-all duration-300 transform ${resumeOpen ? 'translate-y-0 opacity-100 delay-100' : '-translate-y-4 opacity-0'
+                }`}
+            >
+              Frontend
+            </a>
+            <a
+              href="/SparshFullStackResume.pdf"
+              download="SparshFullStackResume.pdf"
+              className={`w-full text-center font-bold px-2 py-4 text-sm hover:text-black hover:bg-white transition-all duration-300 transform ${resumeOpen ? 'translate-y-0 opacity-100 delay-200' : '-translate-y-4 opacity-0'
+                }`}
+            >
+              Fullstack
+            </a>
+          </div>
+        </div>
         <button className='border-r font-bold border-white px-4 py-3 md:p-4 text-sm md:text-base hover:text-black hover:bg-white transition-colors'>Projects</button>
       </div>
       <div className='md:hidden cursor-pointer' onClick={toggleHamburger}>
@@ -29,15 +60,38 @@ function Nav() {
 
     {/* Mobile Cascading Menu */}
     <div
-      className={`md:hidden mx-4 md:mx-8 flex flex-col overflow-hidden transition-all duration-500 ease-in-out border-white ${hamburgerOpen ? 'max-h-64 border-x border-b opacity-100' : 'max-h-0 border-x-0 border-b-0 opacity-0'
+      className={`md:hidden mx-4 md:mx-8 flex flex-col overflow-hidden transition-all duration-500 ease-in-out border-white ${hamburgerOpen ? 'max-h-[30rem] border-x border-b opacity-100' : 'max-h-0 border-x-0 border-b-0 opacity-0'
         }`}
     >
       <button
-        className={`w-full text-left font-bold border-b border-white px-6 py-4 text-base hover:text-black hover:bg-white transition-all duration-300 transform ${hamburgerOpen ? 'translate-y-0 opacity-100 delay-100' : '-translate-y-4 opacity-0'
+        onClick={() => setResumeOpen(!resumeOpen)}
+        className={`w-full text-left font-bold border-b border-white px-6 py-4 text-base hover:text-black hover:bg-white transition-all duration-300 transform flex justify-between items-center ${hamburgerOpen ? 'translate-y-0 opacity-100 delay-100' : '-translate-y-4 opacity-0'
           }`}
       >
-        Resume
+        <span>Resume</span>
+        <span className="text-sm">{resumeOpen ? '▲' : '▼'}</span>
       </button>
+
+      {/* Mobile Resume Dropdown Options */}
+      <div
+        className={`flex flex-col bg-white/5 overflow-hidden transition-all duration-500 ease-in-out border-white ${resumeOpen && hamburgerOpen ? 'max-h-40 border-b opacity-100' : 'max-h-0 border-b-0 opacity-0'}`}
+      >
+        <a
+          href="/Frontend_Resume.pdf"
+          download="Frontend_Resume.pdf"
+          className={`w-full pl-10 pr-6 py-3 text-left font-bold border-b border-white text-sm hover:text-black hover:bg-white transition-all duration-300 transform ${resumeOpen && hamburgerOpen ? 'translate-y-0 opacity-100 delay-100' : '-translate-y-4 opacity-0'}`}
+        >
+          Frontend
+        </a>
+        <a
+          href="/Fullstack_Resume.pdf"
+          download="Fullstack_Resume.pdf"
+          className={`w-full pl-10 pr-6 py-3 text-left font-bold border-b border-white text-sm hover:text-black hover:bg-white transition-all duration-300 transform ${resumeOpen && hamburgerOpen ? 'translate-y-0 opacity-100 delay-200' : '-translate-y-4 opacity-0'}`}
+        >
+          Fullstack
+        </a>
+      </div>
+
       <button
         className={`w-full text-left font-bold px-6 py-4 text-base hover:text-black hover:bg-white transition-all duration-300 transform ${hamburgerOpen ? 'translate-y-0 opacity-100 delay-200' : '-translate-y-4 opacity-0'
           }`}
