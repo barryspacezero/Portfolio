@@ -6,6 +6,7 @@ import Exp from "./sections/Exp"
 import NFP from "./assets/NFP.png"
 import taskmanager from "./assets/taskmanager.png"
 import { ProjectCard } from "./components/ProjectCard"
+import About from "./sections/About"
 
 function App() {
   const [galactic, setGalactic] = useState(false);
@@ -52,7 +53,7 @@ function App() {
         <ProjectCard src={GameInfoBot} title="Telegram-GameInfoBot" description="A Telegram bot built with Python using the Pyrogram library and Twitch's API." githubLink="https://github.com/barryspacezero/Telegram-GameInfoBot" />
         <ProjectCard src={FlipLearn} title="Flip-Learn" description="A Flashcards app for Quizzes built with ReactJS, TypeScript and Tailwind CSS." projectLink="https://flip-learn-xw4f.vercel.app/" githubLink={"https://github.com/barryspacezero/Fliplearn"} />
       </div>
-
+      <About />
 
     </main>
   )
