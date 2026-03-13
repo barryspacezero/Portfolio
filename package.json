@@ -10,8 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@hackernoon/pixel-icon-library": "^1.0.6",
     "@tailwindcss/vite": "^4.1.11",
     "gsap": "^3.13.0",
+    "pixelarticons": "^2.0.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.13.0",

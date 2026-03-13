@@ -78,3 +78,24 @@ button {
   animation: wave 1s ease-in-out infinite;
   color: #00e5ff;
 }
+
+/* Marquee animations for the About section */
+@keyframes marquee-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes marquee-right {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+
+.animate-marquee-left {
+  display: inline-block;
+  animation: marquee-left var(--speed, 30s) linear infinite;
+}
+
+.animate-marquee-right {
+  display: inline-block;
+  animation: marquee-right var(--speed, 30s) linear infinite;
+}

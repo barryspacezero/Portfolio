@@ -23,7 +23,7 @@ const experiences = [
         description:
             "Developed 5 core CRM modules, sub-modules, and 15+ internal API integrations. Optimized SEO for 5,000+ dynamic pages using Next.js. Contributed to application-wide i18n for 9 languages. Worked extensively with TypeScript.",
         skills: ["TypeScript", "Next.js", "React", "SEO", "i18n"],
-        color: "#00e5ff",
+        color: "#08b8c1ee",
     },
     {
         id: 3,
@@ -35,7 +35,7 @@ const experiences = [
         description:
             "Contributed to web development projects, assisting in the development and maintenance of web applications while gaining hands-on experience.",
         skills: ["HTML/CSS", "JavaScript", "Web Development"],
-        color: "#34d399",
+        color: "#ec9006f7",
     },
 ];
 
