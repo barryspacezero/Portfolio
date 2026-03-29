@@ -2,13 +2,13 @@ import React from "react"
 
 export const ProjectCard = ({ src, title, description, githubLink, projectLink }) => {
     return (
-        <div className="group border border-white border-t-0 aspect-square p-6">
+        <div className="group border border-theme-border border-t-0 aspect-square p-6">
 
             <div className="relative w-full h-4/5">
                 <div
                     className="
             absolute inset-0 
-            bg-white
+            bg-theme-border
             translate-x-[6px] translate-y-[6px]
             transition-transform duration-200 ease-out
             group-hover:translate-x-0 group-hover:translate-y-0
@@ -20,7 +20,7 @@ export const ProjectCard = ({ src, title, description, githubLink, projectLink }
                     alt={title}
                     className="
             relative z-10 
-            w-full h-full object-cover border
+            w-full h-full object-cover border border-theme-border
             transition-transform duration-200 ease-out
             group-hover:translate-x-[6px] group-hover:translate-y-[6px]
           "
@@ -37,7 +37,7 @@ export const ProjectCard = ({ src, title, description, githubLink, projectLink }
                         target="_blank"
                         rel="noreferrer"
                         className="
-              border border-white font-bold
+              border border-theme-border font-bold
               p-2 mt-4 w-full
               transition-all duration-200 ease-out
               group-hover:bg-white flex items-center justify-center
@@ -54,7 +54,7 @@ export const ProjectCard = ({ src, title, description, githubLink, projectLink }
                         target="_blank"
                         rel="noreferrer"
                         className="
-              border border-white font-bold
+              border border-theme-border font-bold
               p-2 mt-4 w-full flex items-center justify-center
               transition-all duration-200 ease-out
               group-hover:bg-white

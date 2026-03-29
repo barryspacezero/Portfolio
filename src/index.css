@@ -8,6 +8,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
 @import "tailwindcss";
 
+@theme {
+  --color-theme-border: var(--random-border-color, #ffffff);
+}
+
 /*lets use this font for the name https://fonts.google.com/specimen/Nabla?preview.text=Hi,%20I%20am%20%5BSparsh%5D&specimen.preview.text=Hi,+I+am+%5BSparsh%5D&categoryFilters=Feeling:%2FExpressive%2FFuturistic*/
 
 
@@ -76,7 +80,7 @@ button {
 
 .wave-text:hover span {
   animation: wave 1s ease-in-out infinite;
-  color: #00e5ff;
+  color: var(--random-border-color, #00e5ff);
 }
 
 /* Marquee animations for the About section */

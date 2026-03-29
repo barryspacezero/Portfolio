@@ -2,7 +2,7 @@ import React from "react"
 
 export default function HamburgerMenu() {
     return (
-        <button className="p-2 border border-white hover:bg-white hover:text-black transition-colors flex items-center justify-center">
+        <button className="p-2 border border-theme-border hover:bg-white hover:text-black transition-colors flex items-center justify-center">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"

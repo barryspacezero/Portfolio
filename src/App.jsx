@@ -37,6 +37,13 @@ function App() {
   }, []);
 
   useEffect(() => {
+    // Generate a vibrant random border color on app load
+    const randomHue = Math.floor(Math.random() * 360);
+    const borderColor = `hsl(${randomHue}, 100%, 75%)`;
+    document.documentElement.style.setProperty('--random-border-color', borderColor);
+  }, []);
+
+  useEffect(() => {
     if (galactic) {
       document.body.classList.add("galactic");
     } else {
@@ -48,7 +55,7 @@ function App() {
     <main className="min-h-screen">
       <Nav />
       <Exp />
-      <h1 id="projects" className="text-5xl font-bold text-white justify-center flex border mx-4 p-4 md:mx-8">Projects</h1>
+      <h1 id="projects" className="text-5xl font-bold text-white justify-center flex border border-theme-border mx-4 p-4 md:mx-8">Projects</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 mx-4 md:mx-8">
 
         <ProjectCard src={NFP} title="Food Inspector" description="A simple nutrition tracking app built with ReactJS and Tailwind CSS." projectLink="https://nutrition-fact-panels.vercel.app/" githubLink={"https://github.com/barryspacezero/Nutrition_Fact_Panels"} />

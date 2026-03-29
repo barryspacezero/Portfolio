@@ -48,7 +48,7 @@ function About() {
   ];
 
   return (
-    <footer id="about" className=" flex justify-center items-center border border-white mx-4 md:mx-8 py-4">
+    <footer id="about" className=" flex justify-center items-center border border-theme-border mx-4 md:mx-8 py-4">
       <div className="flex items-center gap-8">
         {socials.map((s, i) => (
           <SocialIcon key={i} href={s.href} label={s.label}>

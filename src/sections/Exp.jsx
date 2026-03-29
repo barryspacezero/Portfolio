@@ -140,7 +140,7 @@ function TimelineItem({ exp, index }) {
                                 <span
                                     key={skill}
                                     className="text-xs px-2 py-0.5 text-white/50 "
-                                    style={{ fontFamily: "'Chakra Petch', sans-serif", border: `1px solid ${exp.color}90` }}
+                                    style={{ fontFamily: "'Chakra Petch', sans-serif", border: `1px solid ${exp.color}` }}
                                 >
                                     {skill}
                                 </span>
@@ -187,7 +187,7 @@ function TimelineItem({ exp, index }) {
 
 export default function Exp() {
     return (
-        <section className="relative py-16 px-4 overflow-hidden border mx-4 md:mx-8 border-t-0" id="experience">
+        <section className="relative py-16 px-4 overflow-hidden border border-theme-border mx-4 md:mx-8 border-t-0" id="experience">
             {/* Ambient background glow */}
             <div
                 className="absolute inset-0 pointer-events-none"
